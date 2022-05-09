@@ -1,3 +1,12 @@
+def main():
+    x, y = 100, 100
+
+
+    width, height = 200, 200
+
+    draw_house(x, y, width, height)
+
+
 def draw_house(x, y, width, height):
     """
     Нарисовать домик ширины widht и высоты height от опорной точки(x, y),
@@ -9,10 +18,11 @@ def draw_house(x, y, width, height):
     :return: None
     """
     print('Типа рисую домик...', x, y, width, height)
+    foundation_height = 0.05*height
+    draw_foundation(x, y, width, height)
+    draw_walls()
+    draw_roof()
     pass    #do nothing
 
 
-x, y = 100, 100
-width, height = 200, 200
-
-draw_house(x, y, width, height)
+main()
